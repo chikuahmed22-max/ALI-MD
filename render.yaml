@@ -1,8 +1,8 @@
 databases:
-    - name: ali-md-db
+    - name: CHIKU
     plan: free
-    databaseName: ali_md
-    user: ali_md
+    databaseName: CHIKU
+    user: CHIKU
 
 services:
     - type: web
