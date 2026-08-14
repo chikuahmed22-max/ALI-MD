@@ -1,0 +1,70 @@
+# CHIKU - Python Edition v15.0.5
+# Powered By AHMAD MD
+# Built for Speed & Stability
+
+import os
+import asyncio
+from datetime import datetime
+
+# --- CONFIG ---
+BOT_NAME = "CHIKU"
+OWNER_NAME = "CHIKU XHOWDHURY "
+PREFIX = "."
+VERSION = "15.0.5"
+
+# --- Bot Class ---
+class Chiku:
+    def __init__(self):
+        print(f"🚀 STARTING {BOT_NAME} v{VERSION}")
+        print("Built on Baileys • Designed for Speed • Enhanced for Stability")
+        self.commands = {}
+        self.load_commands()
+
+    def load_commands(self):
+        print("✅ Loading Commands...")
+        # Add your commands here
+        self.commands = {
+            "ping": self.ping,
+            "alive": self.alive,
+            "menu": self.menu,
+        }
+
+    async def ping(self, message):
+        return f"*Pong!* 🏓\nSpeed: Fast AF\n{BOT_NAME} v{VERSION} is Alive!"
+
+    async def alive(self, message):
+        return f"""*🔥 {BOT_NAME} IS ALIVE 🔥*
+
+*Version:* {VERSION}
+*Status:* Online ✅
+*Mode:* Public
+*Prefix:* {PREFIX}
+*Powered By:* Chiku
+*Time:* {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+"""
+
+    async def menu(self, message):
+        return f"""*╭───『 {BOT_NAME} MENU 』───*
+*│*
+*│* • {PREFIX}ping - Check Speed
+*│* • {PREFIX}alive - Bot Status
+*│* • {PREFIX}menu - This Menu
+*│* • {PREFIX}owner - Owner Info
+*│*
+*╰────────────────*
+
+_Powered By Chiku_
+"""
+
+# --- START BOT ---
+if __name__ == "__main__":
+    bot = Chiku()
+    print(f"\n🔗 Pair Site: https://")
+    print("✅ Bot Loaded Successfully!")
+    print(f"Waiting for commands with prefix '{PREFIX}'...")
+
+    # If you want to connect to real WhatsApp,
+    # use: whatsapp-channel, pybaileys, or whisparr library
+    # Example:
+    # from pybaileys import BaileysClient
+    # client = BaileysClient(session="chiku-session")
