@@ -1,4 +1,4 @@
-### ALI-MD Multi-Device WhatsApp Bot
+### chiku Multi-Device WhatsApp Bot
 
 > **CURRENT BOT VERSION ➜ `10.0.0 ⚡`**
 
